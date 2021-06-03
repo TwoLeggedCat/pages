@@ -1,8 +1,8 @@
 ## NOTICE: This guide was created by <a href="https://github.com/Aikar">Aikar</a>. All credit/appreciation goes to him. They have been copied here because his website was temporarily down.
 
 ### Introduction
-After many weeks of studying the JVM, Flags, and testing various combinations, I came up with a highly tuned set of Garbage Collection flags for Minecraft. I tested these on my server, and have been used for years. I then announced my research to the public, and to this day, many servers have been using my flag recommendations for years and reporting great improvement to garbage collection behavior.</p>
-These flags are the result of a ton of effort, and results of seeing it in production on various server sizes, plugin lists and server types. They have proven themselves repeatedly.</p>
+After many weeks of studying the JVM, Flags, and testing various combinations, I came up with a highly tuned set of Garbage Collection flags for Minecraft. I tested these on my server, and have been used for years. I then announced my research to the public, and to this day, many servers have been using my flag recommendations for years and reporting great improvement to garbage collection behavior.
+These flags are the result of a ton of effort, and results of seeing it in production on various server sizes, plugin lists and server types. They have proven themselves repeatedly.
 I strongly suggest using these flags to start your server.&nbsp;These flags help keep your server running CONSISTENT without any large garbage collection spikes. CPU may be slightly higher, but your server will be overall more reliable and stable TPS.
 If these flags help your server, consider donating.
 
@@ -11,7 +11,7 @@ If these flags help your server, consider donating.
 
 ## The JVM Startup Flags to use – MC 1.15 (Java 8+, MC 1.8+) Update
 **Use these flags exactly, only changing Xmx and Xms. These flags work and scale accordingly to any size of memory, even 500MB but 1.15 will not do well with such low memory…)**
-> java -Xms10G -Xmx10G -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Dusing.aikars.flags=https://mcflags.emc.gs -Daikars.new.flags=true -jar paperclip.jar nogui</p>
+> java -Xms10G -Xmx10G -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Dusing.aikars.flags=https://mcflags.emc.gs -Daikars.new.flags=true -jar paperclip.jar nogui
 
 ### LAST UPDATED: **Apr 25 2020 3:30PM EST**
 These flags are recommended for ALL versions of Minecraft! 1.8 all the way to 1.15+, use this set.
