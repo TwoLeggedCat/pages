@@ -13,7 +13,7 @@ If these flags help your server, consider donating.
 **Use these flags exactly, only changing Xmx and Xms. These flags work and scale accordingly to any size of memory, even 500MB but 1.15 will not do well with such low memory…)**
 > java -Xms10G -Xmx10G -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Dusing.aikars.flags=https://mcflags.emc.gs -Daikars.new.flags=true -jar paperclip.jar nogui</p>
 
-### LAST UPDATED: <strong>Apr 25 2020 3:30PM EST</strong></div>
+### LAST UPDATED: **Apr 25 2020 3:30PM EST**
 These flags are recommended for ALL versions of Minecraft! 1.8 all the way to 1.15+, use this set.
 
 ### IMPORTANT – READ – Don’t use ALL of your memory!! PTERODACTYL USERS!
@@ -28,10 +28,10 @@ Paper is a drop in replacement for Spigot that every Bukkit/Spigot plugin should
 
 <a href="https://aikar.co/wp-content/uploads/2018/07/7608950.png" rel="lightbox[375]"><img class="alignleft wp-image-423" src="https://aikar.co/wp-content/uploads/2018/07/7608950.png" alt="Paper Minecraft Server" srcset="https://aikar.co/wp-content/uploads/2018/07/7608950.png 200w, https://aikar.co/wp-content/uploads/2018/07/7608950-150x150.png 150w, https://aikar.co/wp-content/uploads/2018/07/7608950-180x180.png 180w" sizes="(max-width: 184px) 100vw, 184px" width="184" height="184"></a>
 
-- <a href="https://papermc.io">Download Paper</a></li>
-- <a href="https://paper.readthedocs.io">Paper Documentation</a></li>
-- <a href="https://discord.gg/papermc">Paper Discord</a></li>
-- <a href="https://whypaper.emc.gs">/r/admincraft post on “Why you should switch to Paper”</a> for much more details.</li>
+- <a href="https://papermc.io">Download Paper</a>
+- <a href="https://paper.readthedocs.io">Paper Documentation</a>
+- <a href="https://discord.gg/papermc">Paper Discord</a>
+- <a href="https://whypaper.emc.gs">/r/admincraft post on “Why you should switch to Paper”</a> for much more details.
 
 #### Paper is the only way to run a 1.15 server with decent performance!
 
@@ -45,6 +45,7 @@ If you have and use more than 12GB of memory, adjust the following:
 - -XX:G1HeapRegionSize=16M
 - -XX:G1ReservePercent=15
 - -XX:InitiatingHeapOccupancyPercent=20
+
 NOTICE: If you see increase in old generation collections after this, revert back to the base flags!
 
 Explanation of these changes:
@@ -105,14 +106,15 @@ Controversial feature but may be usable if you can not configure your host for r
 Thanks to <a class="externalLink" href="https://product.hubspot.com/blog/g1gc-fundamentals-lessons-from-taming-garbage-collection" target="_blank" rel="noopener noreferrer">https://product.hubspot.com/blog/g1gc-fundamentals-lessons-from-taming-garbage-collection</a>&nbsp;for helping reinforce my understanding of the flags and introduce improvements!
 
 ## Changelog
-- 5/2/2020: Added +PerfDisableSharedMem, Adjusted MixedGCTarget to 4</li>
-- 4/25/2020: Removed OmitStackTraces since it could cause performance issues with some plugins (but not everyone)</li>
-- **4/5/2020**: Massive refactor of the flag suggestions. Takes a new approach at optimizing pause times. Flags may still be changing. These changes are mandatory for MC 1.15</li>
-- **10/4/2018**: Removed AggressiveOpts and&nbsp;InitiatingHeapOccupancyPercent. Aggressive is removed in Java 11, and IHOP may hurt performance in Java 11. You should remove them for Java 8 too.</li>
-- **8/18/2018**: Adjusted MixedGCLiveThreshold to 35 (from 50) to ensure mixed GC’s start earlier.<br>
+- 5/2/2020: Added +PerfDisableSharedMem, Adjusted MixedGCTarget to 4
+- 4/25/2020: Removed OmitStackTraces since it could cause performance issues with some plugins (but not everyone)
+- **4/5/2020**: Massive refactor of the flag suggestions. Takes a new approach at optimizing pause times. Flags may still be changing. These changes are mandatory for MC 1.15
+- **10/4/2018**: Removed AggressiveOpts and&nbsp;InitiatingHeapOccupancyPercent. Aggressive is removed in Java 11, and IHOP may hurt performance in Java 11. You should remove them for Java 8 too.
+- **8/18/2018**: Adjusted MixedGCLiveThreshold to 35 (from 50) to ensure mixed GC’s start earlier.
+ 
 Added notes about recommended use of 10GB of memory.
 Added more flag documentation
 - **5/24/2018**: Added -XX:+ParallelRefProcEnabled
 - **6/3/2021**: Converted to Markdowwn by TwoLeggedCat, but I don't think I messed anything up :)
 
-I am now living my dream of running my own gaming company, as I have now founded Starlis LLC and operate the Empire Minecraft service, the place where I met my lovely wife Mia!</p>
+I am now living my dream of running my own gaming company, as I have now founded Starlis LLC and operate the Empire Minecraft service, the place where I met my lovely wife Mia!
