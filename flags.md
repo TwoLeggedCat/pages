@@ -115,6 +115,6 @@ Thanks to <a class="externalLink" href="https://product.hubspot.com/blog/g1gc-fu
 Added notes about recommended use of 10GB of memory.
 Added more flag documentation
 - **5/24/2018**: Added -XX:+ParallelRefProcEnabled
-- **6/3/2021**: Converted to Markdowwn by TwoLeggedCat, but I don't think I messed anything up :)
+- **6/3/2021**: Converted to Markdown by TwoLeggedCat, but I don't think I messed anything up :)
 
 I am now living my dream of running my own gaming company, as I have now founded Starlis LLC and operate the Empire Minecraft service, the place where I met my lovely wife Mia!
