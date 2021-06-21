@@ -1,4 +1,4 @@
-## NOTICE: This guide was created by <a href="https://github.com/Aikar">Aikar</a>. All credit/appreciation goes to him. They have been copied here because his website was temporarily down. All content is a DIRECT COPY from https://flags.emc.gs,
+## NOTICE: This guide was created by <a href="https://github.com/Aikar">Aikar</a>. All credit/appreciation goes to him. They have been copied here because his website was temporarily down. All content is a DIRECT COPY from https://flags.emc.gs!
 
 ### Introduction
 After many weeks of studying the JVM, Flags, and testing various combinations, I came up with a highly tuned set of Garbage Collection flags for Minecraft. I tested these on my server, and have been used for years. I then announced my research to the public, and to this day, many servers have been using my flag recommendations for years and reporting great improvement to garbage collection behavior.
